@@ -139,110 +139,6 @@
     
 <div class="card">
     
-    <div class="card-image">
-        <a href="/2020/04/03/config/" class="image is-7by1">
-            <img class="thumbnail" src="/images/avatar.png" alt=".config.yml">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-04-03T06:44:56.000Z">2020-04-03</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    13 分钟 读完 (大约 1879 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2020/04/03/config/">.config.yml</a>
-            
-        </h1>
-        <div class="content">
-            <p>原文来自PPOffice的ICARUS主题文档，由猫梨（nek0ri）进行英译中的翻译，本文档翻译遵循MIT协议。</p>
-<p>译者水平有限，另时间较为仓促，若其中存在错误，期待您的指正！</p>
-<p>猫梨（nek0ri）网页：nek0ri.de</p>
-<p>猫梨（nek0ri）邮箱：<a href="mailto:nek0ri@outlook.com">nek0ri@outlook.com</a></p>
-<p>ICARUS主题文档（插件与部件篇）<br>图 / 不详（侵删）</p>
-<p>注：带“*”为进阶操作，主题配置文件为themes目录下Icarus文件夹内的_config.yml文件。</p>
-<p>插件</p>
-<ol>
-<li>评论<br>官方文档已经列出了内置的所有评论插件，你可点击这里前往官方文档，选中想要使用的评论插件后点击相应的Installation instructions，即可前往相应评论插件的官方教程处。</li>
-</ol>
-<ol start="2">
-<li>捐赠<br>想要开启在文章内容下方的捐赠按钮，你需找到主题配置文件（即_config.yml）。目前Icarus支持以下捐赠入口，你可始终在你的博客使用一个或多个捐赠入口。</li>
-</ol>
-<p>支付宝</p>
-<p>1<br>2<br>3<br>4<br>donate:<br>    -<br>        type: alipay<br>        qrcode: # 指向你二维码图片的路径或链接<br>微信</p>
-<p>1<br>2<br>3<br>4<br>donate:<br>    -<br>        type: wechat<br>        qrcode: # 指向你二维码图片的路径或链接<br>Paypal</p>
-<p>你需要首先开启Paypal Donate Button。当你完成操作后请留意business和currency_code并将他们填入_config.yml。</p>
-<p>1<br>2<br>3<br>4<br>5<br>donate:<br>    -<br>        type: paypal<br>        business: # 你Paypal的邮箱地址或者生成的business ID<br>        currency_code: # currency code<br>Patreon</p>
-<p>1<br>2<br>3<br>4<br>donate:<br>    -<br>        type: patreon<br>        url: # 指向你Patreon页面的URL</p>
-<ol start="3">
-<li>常规</li>
-<li>1 站点分析插件<br>官方文档已经列出了内置的所有分析插件，你可点击这里前往官方文档，选中想要使用的分析插件后点击相应的Installation instructions，即可前往相应分析插件的官方教程处。</li>
-</ol>
-<p>3.2 MathJax插件<br>f<br>(<br>a<br>)<br>=<br>1<br>2<br>π<br>i<br>∮<br>γ<br>f<br>(<br>z<br>)<br>z<br>−<br>a<br>d<br>z<br>配置</p>
-<p>要开启MathJax支持，你只需在主题配置文件中设置plugins.mathjax = true。</p>
-<p>1<br>2<br>3<br>4</p>
-<h1 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h1><p>plugins:<br>    …<br>    mathjax: true # options: true, false<br>需要更多MathJax配置，请编辑/layout/plugin/mathjax.ejs：</p>
-<p>1<br>2<br>3<br>4<br>5<br>document.addEventListener(‘DOMContentLoaded’, function () {<br>    MathJax.Hub.Config({<br>        // Edit here<br>    });<br>});<br>TeX和LaTeX输入</p>
-<p>注意：请留意，当你在markdown文件中写TeX或LaTeX时，你需要用转义字符来防止某个符号被markdown解释程序处理。</p>
-<p>输入</p>
-<p>1<br>2<br>当 $a \ne 0$，\(ax^2 + bx + c = 0\) 有两个解，他们是<br>$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$<br>结果</p>
-<p>当<br>a<br>≠<br>0<br>，<br>a<br>x<br>2<br>+<br>b<br>x<br>+<br>c<br>=<br>0<br> 有两个解，他们是<br>x<br>=<br>−<br>b<br>±<br>√<br>b<br>2<br>−<br>4<br>a<br>c<br>2<br>a<br>.<br>MathML输入</p>
-<p>注意：请留意，换行符可能会被markdown解释程序转化为标签，这回干涉MathML的注释，因此请在一行内写完MathML。</p>
-<p>输入</p>
-<p>1<br>2<br>当 <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&#x2260;</mo><mn>0</mn></math>，<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo> <mi>b</mi><mi>x</mi><mo>+</mo> <mi>c</mi> <mo>=</mo> <mn>0</mn></math> 有两个解，他们是<br><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>x</mi> <mo>=</mo><mrow><mfrac><mrow><mo>&#x2212;</mo><mi>b</mi><mo>&#x00B1;</mo><msqrt><msup><mi>b</mi><mn>2</mn></msup><mo>&#x2212;</mo><mn>4</mn><mi>a</mi><mi>c</mi></msqrt></mrow><mrow> <mn>2</mn><mi>a</mi> </mrow></mfrac></mrow><mtext>.</mtext></math><br>结果</p>
-<p>当<br>a<br>≠<br>0<br>，<br>a<br>x<br>2<br>+<br>b<br>x<br>+<br>c<br>=<br>0<br> 有两个解，他们是<br>x<br>=<br>−<br>b<br>±<br>√<br>b<br>2<br>−<br>4<br>a<br>c<br>2<br>a<br>.<br>AsciiMath输入</p>
-<p>注意：请留意，当你在markdown文件中写AsciiMath的时候，你需要用转义字符来防止某个符号被markdown解释程序处理。</p>
-<p>输入</p>
-<p>1<br>当 `a != 0`，`ax^2 + bx + c = 0`有两个解，他们是<p style="text-align:center">`x = (-b +- sqrt(b^2-4ac))/(2a) .`</p><br>结果</p>
-<p>当<br>a<br>≠<br>0<br>，<br>a<br>x<br>2<br>+<br>b<br>x<br>+<br>c<br>=<br>0<br>有两个解，他们是</p>
-<h1 id="x"><a href="#x" class="headerlink" title="x"></a>x</h1><p>−<br>b<br>±<br>√<br>b<br>2<br>−<br>4<br>a<br>c<br>2<br>a<br>.<br>3.2 图库（Gallery）插件<br>在主题配置文件（即_config.yml）中开启图库插件后，你只需在文章中添加一些图片即可创建图库：</p>
-<p>1<br>2<br>plugins:<br>    gallery: true<br>此外，你还可以用齐行的图库（Justified Gallery）来展示网格化的照片集：</p>
-<p>HTML + Markdown<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>&lt;div class=”justified-gallery”&gt;<br>&lt;!– 在这里需要一行空行来使得以下的markdown被显示 –&gt;<br><img src="/hexo-theme-icarus/gallery/animals/elephant.jpeg" alt="Elephant"><br><img src="/hexo-theme-icarus/gallery/animals/dog.jpeg" alt="Dog"><br><img src="/hexo-theme-icarus/gallery/animals/birds.jpeg" alt="Birds"><br><img src="/hexo-theme-icarus/gallery/animals/cat.jpeg" alt="Cat"><br><img src="/hexo-theme-icarus/gallery/animals/fox.jpeg" alt="Fox"><br><img src="/hexo-theme-icarus/gallery/animals/horse.jpeg" alt="Horse"><br><img src="/hexo-theme-icarus/gallery/animals/leopard.jpeg" alt="Leopard"><br>&lt;/div&gt;<br>由于本站（nek0ri.de）所有图片都使用图床，因此不便显示效果。效果请点击这里前往主题官方文档查看。</p>
-<ol start="4">
-<li>搜索<br>官方文档已经列出了内置的所有搜索插件，你可点击这里前往官方文档，选中想要使用的搜索插件后点击相应的Installation instructions，即可前往相应搜索插件的官方教程处。</li>
-</ol>
-<ol start="5">
-<li>分享<br>官方文档已经列出了内置的所有分享插件，你可点击这里前往官方文档，选中想要使用的分享插件后点击相应的Installation instructions，即可前往相应分享插件的官方教程处。</li>
-</ol>
-<p>部件<br>个人档案侧边栏部件<br>Icarus以个人档案侧边栏部件的方式为你提供了一种展示你自己的方式。若要使用这一部件，请在你主题配置文件下部件的区域添加以下几行：</p>
-<p>_config.yml<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>-<br>    type: profile<br>    position: # 在左边或右边展示<br>    author: # 你的名字<br>    author_title: # 你的主题（描述）<br>    location: # 你在哪里<br>    avatar: # 你头像的路径或者URL<br>    gravatar: # 你gravatar的邮箱地址<br>    follow_link: # 任何你想前往的路径或URL<br>    social_links: # 在此处添加你社交网站的链接<br>你需要注意两件事情：</p>
-<p>如果你想使用Gravatar，那就在gravatar区域填上你注册时的邮箱地址。否则，就让它空着，以防和你头像的设置起冲突。<br>social_links区域可以有大量的文字链接或者图标链接，你可以前往ICARUS主题中文文档 · 配置的多样的链接设置查看详情。</p>
-<p>侧边栏部件一览<br>由于这一全新的部件配置体系，你可以在页面任意一边轻易的设置部件。Icarus在部件已经定义的情况下，会读取在主题配置文件下已经启用的部件的列表，并将他们有序的显示出来。在Icarus 2.0.0中支持以下部件：</p>
-<p>Archives (archive) #归档<br>Categories (category) #分类<br>Links (links) #链接<br>Profiles (profile) #个人档案<br>Recent Posts (recent_posts) #最近的文章<br>Tags (tag) #标签<br>Tag Cloud (tagcloud) #标签云<br>Table of Content / Catalogue (toc) #目录表<br>启用的部件会被定为一个队列，每个部件通常都有两个规定的区域：type（类型）和position（位置）。type（类型）区域明确被启用的部件，并且是以上内容的某个名称。一个部件的位置可以在left（左侧）或者right（右侧）。</p>
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>widgets:<br>    -<br>        type: category<br>        position: left<br>    -<br>        type: tagcloud<br>        position: left<br>    -<br>        type: recent_posts<br>        position: right<br>    -<br>        type: archive<br>        position: right<br>    -<br>        type: tag<br>        position: right<br>这些部件大多都没有额外的配置。然而当你需要额外的配置，请参考之前的内容。</p>
-<p>链接（Links）侧边栏部件<br>你可以在开启这一部件之后，在侧边栏展示前往其他网站的链接。你只需添加以下的内容在主题配置文件的widgets区域中即可启用：</p>
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>-<br>    type: links<br>    position: left<br>    links:<br>        ‘网站名称’: ‘<a href="http://website/url&#39;">http://website/url&#39;</a><br>        Hexo: ‘<a href="https://hexo.io&#39;">https://hexo.io&#39;</a><br>        PPOffice: ‘<a href="https://github.com/ppoffice&#39;">https://github.com/ppoffice&#39;</a><br>需要留意一点，链接部件只为网站名称和URL建立列表，而URL显示在这一部件的右边。</p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
@@ -408,7 +304,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            4
+                            3
                         </p>
                     </a>
                 </div>
@@ -558,7 +454,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/icarus/">
                         <span class="tag">icarus</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -575,25 +471,6 @@
         <h3 class="menu-label">
             最新文章
         </h3>
-        
-        <article class="media">
-            
-            <a href="/2020/04/03/config/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/avatar.png" alt=".config.yml">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-03T06:44:56.000Z">2020-04-03</time></div>
-                    <a href="/2020/04/03/config/" class="title has-link-black-ter is-size-6 has-text-weight-normal">.config.yml</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
         
         <article class="media">
             
@@ -669,7 +546,7 @@
                     <span class="level-item">四月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -698,25 +575,6 @@
         
         <article class="media">
             
-            <a href="/2020/04/03/config/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/avatar.png" alt=".config.yml">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-03T06:44:56.000Z">2020-04-03</time></div>
-                    <a href="/2020/04/03/config/" class="title has-link-black-ter is-size-6 has-text-weight-normal">.config.yml</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
             <a href="/2020/04/03/hexo%20new/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/avatar.png" alt="hexo new">
@@ -789,7 +647,7 @@
                     <span class="level-item">四月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
