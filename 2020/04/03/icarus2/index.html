@@ -7,18 +7,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>hexo - yrz</title>
+<title>icarus配置2 - yrz</title>
 
 
-    <meta property="og:type" content="article">
-<meta property="og:title" content="hexo">
-<meta property="og:url" content="http://yoursite.com/2020/04/03/hexo/index.html">
+    <meta name="description" content="修改navbar导航栏左边的logo配置方式因为不会设计Logo, 就改成”icon+文字”的方式, 并加入logo.img配置项  themes&#x2F;hexo-theme-icarus&#x2F;layout&#x2F;common&#x2F;navbar.ejs2. 修改navbar导航栏右边的搜索功能原版2.3.0只有一个小的搜索icon, 加入搜索输入框并嵌入搜索icon themes&#x2F;hexo-theme-icarus">
+<meta property="og:type" content="article">
+<meta property="og:title" content="icarus配置2">
+<meta property="og:url" content="http://yoursite.com/2020/04/03/icarus2/index.html">
 <meta property="og:site_name" content="yrz">
+<meta property="og:description" content="修改navbar导航栏左边的logo配置方式因为不会设计Logo, 就改成”icon+文字”的方式, 并加入logo.img配置项  themes&#x2F;hexo-theme-icarus&#x2F;layout&#x2F;common&#x2F;navbar.ejs2. 修改navbar导航栏右边的搜索功能原版2.3.0只有一个小的搜索icon, 加入搜索输入框并嵌入搜索icon themes&#x2F;hexo-theme-icarus">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
 <meta property="article:published_time" content="2020-04-03T03:01:56.000Z">
-<meta property="article:modified_time" content="2020-04-03T03:01:56.727Z">
+<meta property="article:modified_time" content="2020-04-03T05:11:55.712Z">
 <meta property="article:author" content="yrz">
+<meta property="article:tag" content="icarus">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
@@ -78,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.jpg" alt="hexo" height="28">
+                <img src="/images/logo.jpg" alt="icarus配置2" height="28">
             
             </a>
         </div>
@@ -140,7 +143,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 0 个字)
+                    8 分钟 读完 (大约 1176 个字)
                 </span>
                 
                 
@@ -149,11 +152,51 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                hexo
+                icarus配置2
             
         </h1>
         <div class="content">
-            
+            <ol>
+<li>修改navbar导航栏左边的logo配置方式<br>因为不会设计Logo, 就改成”icon+文字”的方式, 并加入logo.img配置项</li>
+</ol>
+<p>themes/hexo-theme-icarus/layout/common/navbar.ejs<br>2. 修改navbar导航栏右边的搜索功能<br>原版2.3.0只有一个小的搜索icon, 加入搜索输入框并嵌入搜索icon</p>
+<p>themes/hexo-theme-icarus/layout/common/navbar.ejs<br>themes/hexo-theme-icarus/source/css/style.styl<br>3. 修改个人信息页中的几个links<br>原版是通过socialLinks动态配置的, 不支持微信, 码云, 微博这几个常用, 这里为了方便我使用<a>+<img>标签写死</p>
+<p>themes/hexo-theme-icarus/layout/widget/profile.ejs<br>4. 友情链接标题前加入icon, 为了好看<br>themes/hexo-theme-icarus/layout/widget/links.ejs<br>5. 修改文章页(index页和post页)的文章时间<br>加入判断, 如果是列表页显示例如几月前, 文章页显示具体日期, 例如2018-12-22</p>
+<p>themes/hexo-theme-icarus/layout/common/article.ejs<br>6. 修改文章详情页面不显示文章图片thumbnail<br>在阅读文章时感觉有点花, 默认是index页和post页都会显示</p>
+<p>themes/hexo-theme-icarus/layout/common/article.ejs<br>7. 修改首页文章列表摘要信息不显示样式<br>去掉Markdown生成的html标签, 类似简书上的文章排版, 整洁一点</p>
+<p>themes/hexo-theme-icarus/layout/common/article.ejs<br>8. 修改文章页面布局<br>原版的主页和文章页都使用三栏布局, 在文章页阅读会显得内容很窄, 尤其是代码部分, 需要左右滚动, 故修改文章页为两栏布局</p>
+<p>themes/hexo-theme-icarus/includes/helpers/layout.js<br>themes/hexo-theme-icarus/layout/common/widget.ejs<br>themes/hexo-theme-icarus/layout/layout.ejs<br>themes/hexo-theme-icarus/source/css/style.styl<br>9. 目录的开启方式改为默认就开启文章目录<br>这样可以不用每个md文件都去写toc: true</p>
+<p>themes/hexo-theme-icarus/includes/helpers/config.js<br>10. 修改开启目录后的显示问题<br>默认目录在滚动文章时如果太长会显示不全, 所以增加目录粘性布局</p>
+<p>themes/hexo-theme-icarus/layout/widget/toc.ejs<br>11. 文章页增加版权声明<br>themes/hexo-theme-icarus/layout/common/article.ejs<br>themes/hexo-theme-icarus/source/css/style.styl<br>12. 修改底部footer的显示信息<br>themes/hexo-theme-icarus/layout/common/footer.ejs<br>配合gulp压缩<br>主要是为了在hexo generate到public目录后, 压缩html, css, js等资源</p>
+<p>经过压缩, 我的public目录大小从8MB降到5MB, 还是可以的</p>
+<p>第一次用压缩工具, 记录下gulp的安装和使用, 及配合hexo icarus主题进行压缩时的几个问题</p>
+<p>安装<br>npm install gulp –save<br>npm install gulp -g<br>还需要以下模块</p>
+<p>gulp-htmlclean: 清理html<br>gulp-htmlmin: 压缩html<br>gulp-minify-css: 压缩css<br>gulp-uglify: 混淆js<br>gulp-imagemin: 压缩图片<br>执行安装命令</p>
+<p>npm install gulp-htmlclean gulp-htmlmin gulp-minify-css gulp-uglify gulp-imagemin –save<br>最好在安装一个可以打印错误日志的工具, 之后会用到:</p>
+<p>npm install –save-dev gulp-util<br>建立任务<br>在hexo根目录建立文件gulpfile.js, 内容如下:</p>
+<p>var gulp = require(‘gulp’);<br>var minifycss = require(‘gulp-minify-css’);<br>var uglify = require(‘gulp-uglify’);<br>var htmlmin = require(‘gulp-htmlmin’);<br>var htmlclean = require(‘gulp-htmlclean’);<br>var imagemin = require(‘gulp-imagemin’);<br>var gutil = require(‘gulp-util’);</p>
+<p>// 压缩html<br>gulp.task(‘minify-html’, function() {<br>    return gulp.src(‘./public/<strong>/*.html’)<br>        .pipe(htmlclean())<br>        .pipe(htmlmin({<br>            removeComments: true,<br>            minifyJS: true,<br>            minifyCSS: true,<br>            minifyURLs: true,<br>        }))<br>        .pipe(gulp.dest(‘./public’))<br>});<br>// 压缩html<br>gulp.task(‘minify-xml’, function() {<br>    return gulp.src(‘./public/</strong>/<em>.xml’)<br>        .pipe(htmlclean())<br>        .pipe(htmlmin({<br>            removeComments: true,<br>            minifyJS: true,<br>            minifyCSS: true,<br>            minifyURLs: true,<br>        }))<br>        .pipe(gulp.dest(‘./public’))<br>});<br>// 压缩css<br>gulp.task(‘minify-css’, function() {<br>    return gulp.src(‘./public/**/</em>.css’)<br>        .pipe(minifycss({<br>            compatibility: ‘ie8’<br>        }))<br>        .pipe(gulp.dest(‘./public’));<br>});<br>// 压缩js<br>gulp.task(‘minify-js’, function() {<br>    return gulp.src(‘./public/js/<em>*/</em>.js’)<br>        .pipe(uglify())<br>        .pipe(gulp.dest(‘./public’));<br>});</p>
+<p>// 压缩js<br>gulp.task(‘minify-js’, function() {<br>    return gulp.src(‘./public/js/<em>*/</em>.js’)<br>        .pipe(uglify())<br>        .on(‘error’, function (err) { gutil.log(gutil.colors.red(‘[Error]’), err.toString()); })<br>        .pipe(gulp.dest(‘./public’));<br>});</p>
+<p>// 压缩图片<br>gulp.task(‘minify-images’, function() {<br>    return gulp.src(‘./public/img/<em>*/</em>.*’)<br>        .pipe(imagemin(<br>            [imagemin.gifsicle({‘optimizationLevel’: 3}),<br>                imagemin.jpegtran({‘progressive’: true}),<br>                imagemin.optipng({‘optimizationLevel’: 7}),<br>                imagemin.svgo()],<br>            {‘verbose’: true}))<br>        .pipe(gulp.dest(‘./public/img’))<br>});<br>// 默认任务<br>gulp.task(‘default’, [<br>    ‘minify-html’,’minify-xml’,’minify-css’,’minify-js’,’minify-images’<br>]);<br>问题一: gulp版本<br>在Hexo根目录执行gulp, 错误如下:</p>
+<p>AssertionError: Task function must be specified。<br>版本问题导致的, 可以查看下gulp版本: gulp -v</p>
+<p>修改package.json中的gulp版本为3.x, 例如:</p>
+<p>“dependencies”: {<br>    “gulp”: “^3.9.1”,<br>    // …<br>}<br>然后重新安装gulp: npm install gulp</p>
+<p>问题二: icarus主题中的js语法问题<br>接下来gulp可能会发生如下错误:</p>
+<p>GulpUglifyError: unable to minify JavaScript<br>原因是javascirpt语法问题，在es5环境里使用了es6、es7语法</p>
+<p>因为上面安装部分和gulpfile.js中已经添加了错误打印, 可以看到具体的错误信息</p>
+<p>我修改了如下js文件:</p>
+<p>themes/hexo-theme-icarus/source/js/back-to-top.js<br>themes/hexo-theme-icarus/source/js/clipboard.js<br>themes/hexo-theme-icarus/source/js/main.js</p>
+<p>作者：i蝸居年華_谢谢谢<br>链接：<a href="https://www.jianshu.com/p/815adbb220a3">https://www.jianshu.com/p/815adbb220a3</a><br>来源：简书</p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/icarus/" rel="tag">icarus</a>
+                </div>
+            </div>
         </div>
         
         
@@ -203,19 +246,12 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/04/03/%E6%B5%8B%E8%AF%95/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/04/03/Icarus/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">测试</span>
+                <span class="level-item">icarus配置</span>
             </a>
         </div>
         
-        
-        <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2020/04/02/helloword2/">
-                <span class="level-item">helloword2</span>
-                <i class="level-item fas fa-chevron-right"></i>
-            </a>
-        </div>
         
     </div>
 </div>
@@ -286,7 +322,7 @@
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
-                            1
+                            2
                         </p>
                     </a>
                 </div>
@@ -396,10 +432,28 @@
     
         <div class="card widget">
     <div class="card-content">
-        <h3 class="menu-label">
-            标签云
-        </h3>
-        <a href="/tags/test/" style="font-size: 10px;">test</a>
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/hexo/">
+                        <span class="tag">hexo</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/icarus/">
+                        <span class="tag">icarus</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
     </div>
 </div>
     
@@ -414,16 +468,16 @@
         
         <article class="media">
             
-            <a href="/2020/04/03/%E6%B5%8B%E8%AF%95/" class="media-left">
+            <a href="/2020/04/03/config/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="测试">
+                    <img class="thumbnail" src="/images/avatar.png" alt=".config.yml">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-03T03:37:17.000Z">2020-04-03</time></div>
-                    <a href="/2020/04/03/%E6%B5%8B%E8%AF%95/" class="title has-link-black-ter is-size-6 has-text-weight-normal">测试</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-03T06:44:56.000Z">2020-04-03</time></div>
+                    <a href="/2020/04/03/config/" class="title has-link-black-ter is-size-6 has-text-weight-normal">.config.yml</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -433,16 +487,35 @@
         
         <article class="media">
             
-            <a href="/2020/04/03/hexo/" class="media-left">
+            <a href="/2020/04/03/hexo%20new/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="hexo">
+                    <img class="thumbnail" src="/images/avatar.png" alt="hexo new">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-03T05:34:56.000Z">2020-04-03</time></div>
+                    <a href="/2020/04/03/hexo%20new/" class="title has-link-black-ter is-size-6 has-text-weight-normal">hexo new</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/04/03/Icarus/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="icarus配置">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-03T03:01:56.000Z">2020-04-03</time></div>
-                    <a href="/2020/04/03/hexo/" class="title has-link-black-ter is-size-6 has-text-weight-normal">hexo</a>
+                    <a href="/2020/04/03/Icarus/" class="title has-link-black-ter is-size-6 has-text-weight-normal">icarus配置</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -452,35 +525,16 @@
         
         <article class="media">
             
-            <a href="/2020/04/02/helloword2/" class="media-left">
+            <a href="/2020/04/03/icarus2/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="helloword2">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="icarus配置2">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-02T06:58:10.000Z">2020-04-02</time></div>
-                    <a href="/2020/04/02/helloword2/" class="title has-link-black-ter is-size-6 has-text-weight-normal">helloword2</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/04/01/hello-world/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hello World">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-01T08:45:12.223Z">2020-04-01</time></div>
-                    <a href="/2020/04/01/hello-world/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hello World</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-03T03:01:56.000Z">2020-04-03</time></div>
+                    <a href="/2020/04/03/icarus2/" class="title has-link-black-ter is-size-6 has-text-weight-normal">icarus配置2</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -511,26 +565,6 @@
         </li>
         
         </ul>
-        </div>
-    </div>
-</div>
-        
-            <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                标签
-            </h3>
-            <div class="field is-grouped is-grouped-multiline">
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/test/">
-                        <span class="tag">test</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-            </div>
         </div>
     </div>
 </div>
@@ -554,16 +588,16 @@
         
         <article class="media">
             
-            <a href="/2020/04/03/%E6%B5%8B%E8%AF%95/" class="media-left">
+            <a href="/2020/04/03/config/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="测试">
+                    <img class="thumbnail" src="/images/avatar.png" alt=".config.yml">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-03T03:37:17.000Z">2020-04-03</time></div>
-                    <a href="/2020/04/03/%E6%B5%8B%E8%AF%95/" class="title has-link-black-ter is-size-6 has-text-weight-normal">测试</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-03T06:44:56.000Z">2020-04-03</time></div>
+                    <a href="/2020/04/03/config/" class="title has-link-black-ter is-size-6 has-text-weight-normal">.config.yml</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -573,16 +607,35 @@
         
         <article class="media">
             
-            <a href="/2020/04/03/hexo/" class="media-left">
+            <a href="/2020/04/03/hexo%20new/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="hexo">
+                    <img class="thumbnail" src="/images/avatar.png" alt="hexo new">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-03T05:34:56.000Z">2020-04-03</time></div>
+                    <a href="/2020/04/03/hexo%20new/" class="title has-link-black-ter is-size-6 has-text-weight-normal">hexo new</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/04/03/Icarus/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="icarus配置">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-03T03:01:56.000Z">2020-04-03</time></div>
-                    <a href="/2020/04/03/hexo/" class="title has-link-black-ter is-size-6 has-text-weight-normal">hexo</a>
+                    <a href="/2020/04/03/Icarus/" class="title has-link-black-ter is-size-6 has-text-weight-normal">icarus配置</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -592,35 +645,16 @@
         
         <article class="media">
             
-            <a href="/2020/04/02/helloword2/" class="media-left">
+            <a href="/2020/04/03/icarus2/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="helloword2">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="icarus配置2">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-02T06:58:10.000Z">2020-04-02</time></div>
-                    <a href="/2020/04/02/helloword2/" class="title has-link-black-ter is-size-6 has-text-weight-normal">helloword2</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/04/01/hello-world/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hello World">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-01T08:45:12.223Z">2020-04-01</time></div>
-                    <a href="/2020/04/01/hello-world/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hello World</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-03T03:01:56.000Z">2020-04-03</time></div>
+                    <a href="/2020/04/03/icarus2/" class="title has-link-black-ter is-size-6 has-text-weight-normal">icarus配置2</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -655,26 +689,6 @@
     </div>
 </div>
     
-        <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                标签
-            </h3>
-            <div class="field is-grouped is-grouped-multiline">
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/test/">
-                        <span class="tag">test</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</div>
-    
     
 </div>
 
@@ -687,7 +701,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.jpg" alt="hexo" height="28">
+                    <img src="/images/logo.jpg" alt="icarus配置2" height="28">
                 
                 </a>
                 <p class="is-size-7">
