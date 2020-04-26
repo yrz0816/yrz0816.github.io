@@ -7,12 +7,12 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>分类: 文章 - yrz</title>
+<title>标签: NPM - yrz</title>
 
 
     <meta property="og:type" content="website">
 <meta property="og:title" content="yrz">
-<meta property="og:url" content="http://yoursite.com/categories/%E6%96%87%E7%AB%A0/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/NPM/index.html">
 <meta property="og:site_name" content="yrz">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
@@ -126,91 +126,12 @@
     <div class="card-content">
         <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
-            <li><a href="/categories">分类</a></li>
-            
-            <li class="is-active"><a href="#" aria-current="page">文章</a></li>
+            <li><a href="/tags">标签</a></li>
+            <li class="is-active"><a href="#" aria-current="page">NPM</a></li>
         </ul>
         </nav>
     </div>
 </div>
-
-    
-<div class="card">
-    
-    <div class="card-image">
-        <a href="/2020/04/26/qr/" class="image is-7by1">
-            <img class="thumbnail" src="/images/avatar.png" alt="微信小程序设置二维码">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-04-26T03:29:56.000Z">2020-04-26</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%E6%96%87%E7%AB%A0/">文章</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    5 分钟 读完 (大约 676 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2020/04/26/qr/">微信小程序设置二维码</a>
-            
-        </h1>
-        <div class="content">
-            <h3 id="step1：开启扫描二维码打开小程序"><a href="#step1：开启扫描二维码打开小程序" class="headerlink" title="step1：开启扫描二维码打开小程序"></a>step1：开启扫描二维码打开小程序</h3><p>登录小程序后台，进入“开发-开发设置-扫普通链接二维码打开小程序”，开启功能后即可配置二维码规则。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/4041074-419b8e0ee490afa5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/716/format/webp" alt="img"></p>
-<h3 id="step2：配置二维码"><a href="#step2：配置二维码" class="headerlink" title="step2：配置二维码"></a>step2：配置二维码</h3><h4 id="1、填写二维码"><a href="#1、填写二维码" class="headerlink" title="1、填写二维码"></a>1、填写二维码</h4><p>二维码规则：</p>
-<blockquote>
-<ul>
-<li>二维码规则的域名须通过ICP备案的验证。</li>
-<li>支持http、https、ftp开头的链接（如：<a href="https://links.jianshu.com/go?to=http%3A%2F%2Fwx.qq.com">http://wx.qq.com</a>、<a href="https://links.jianshu.com/go?to=https%3A%2F%2Fwx.qq.com%2Fmp%2F">https://wx.qq.com/mp/</a>、<a href="https://links.jianshu.com/go?to=https%3A%2F%2Fwx.qq.com%2Fmp%3Fid%3D123">https://wx.qq.com/mp?id=123</a>）</li>
-<li>一个小程序帐号可配置不多于10个二维码前缀规则。</li>
-</ul>
-</blockquote>
-<h4 id="2、校验文件"><a href="#2、校验文件" class="headerlink" title="2、校验文件"></a>2、校验文件</h4><p>现在是通过把微信给的连接加到路由地址上去验证</p>
-<h3 id="3、小程序功能页面"><a href="#3、小程序功能页面" class="headerlink" title="3、小程序功能页面"></a>3、小程序功能页面</h3><p>小程序功能页面可打开指定页面，扫描二维码可打开对应页面。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/4041074-cb8db08ac53f06ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/690/format/webp" alt="img"></p>
-<h4 id="step3：扫描二维码打开小程序"><a href="#step3：扫描二维码打开小程序" class="headerlink" title="step3：扫描二维码打开小程序"></a>step3：扫描二维码打开小程序</h4><p>配置二维码时可配置测试链接，利用第三方二维码生成工具，使用测试链接生成二维码，利用微信“扫一扫”或微信内长按识别二维码跳转小程序。</p>
-<p>链接?后为参数部分，可在onLoad事件中提取<code>q</code>参数并自行<code>decodeURIComponent</code>一次，即可获取原二维码的完整内容。</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">onLoad: <span class="function"><span class="keyword">function</span> (<span class="params">options</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (options.q) &#123;</span><br><span class="line">      <span class="keyword">let</span> queryAll = <span class="built_in">decodeURIComponent</span>(options.q);</span><br><span class="line">      <span class="keyword">let</span> id = gup(<span class="string">'id'</span>, queryAll);</span><br><span class="line">      <span class="comment">//console.log(queryAll);</span></span><br><span class="line">      <span class="comment">//console.log(id);</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 获取URL中某个字符串字段</span></span><br><span class="line"><span class="comment"> * gup('id', 'https://www.lubanso.com/wx/home/?id=bHViYW5zb7W7DJI=&amp;jhkfdhkjfda')</span></span><br><span class="line"><span class="comment"> * //===&gt; bHViYW5zb7W7DJI=</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">gup</span>(<span class="params">name, url</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (!url) url = location.href;</span><br><span class="line">  name = name.replace(<span class="regexp">/[\[]/</span>, <span class="string">"\\\["</span>).replace(<span class="regexp">/[\]]/</span>, <span class="string">"\\\]"</span>);</span><br><span class="line">  <span class="keyword">var</span> regexS = <span class="string">"[\\?&amp;]"</span> + name + <span class="string">"=([^&amp;#]*)"</span>;</span><br><span class="line">  <span class="keyword">var</span> regex = <span class="keyword">new</span> <span class="built_in">RegExp</span>(regexS);</span><br><span class="line">  <span class="keyword">var</span> results = regex.exec(url);</span><br><span class="line">  <span class="keyword">return</span> results == <span class="literal">null</span> ? <span class="literal">null</span> : results[<span class="number">1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="三、注意事项"><a href="#三、注意事项" class="headerlink" title="三、注意事项"></a>三、注意事项</h2><blockquote>
-<ul>
-<li>开放范围：企业、媒体、政府及其他组织类型小程序。</li>
-<li>对于普通链接二维码，目前支持使用微信“扫一扫”或微信内长按识别二维码跳转小程序。</li>
-<li>上线时需要配置https开头的链接，并且配置指定域名。</li>
-<li>上线时，需要发布二维码规则才可使用。</li>
-<li>填写符合二维码前缀匹配规则的二维码完整链接用于测试，如包括参数，请完整填写。</li>
-<li>配置温馨规则的时候比如<em>https://</em>s.huiqu.com/tw 会匹配到<a href="https://s.huiqu.com/tw?id=1">https://s.huiqu.com/tw?id=1</a></li>
-</ul>
-</blockquote>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
 
     
 <div class="card">
@@ -386,123 +307,6 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cnpm install [name]</span><br></pre></td></tr></table></figure>
 
 <p><a href="https://www.runoob.com/nodejs/nodejs-npm.html">https://www.runoob.com/nodejs/nodejs-npm.html</a></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-image">
-        <a href="/2020/04/07/pythonisexit/" class="image is-7by1">
-            <img class="thumbnail" src="/images/avatar.png" alt="python什么时候会被取代">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-04-07T03:29:56.000Z">2020-04-07</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%E6%96%87%E7%AB%A0/">文章</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    19 分钟 读完 (大约 2815 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2020/04/07/pythonisexit/">python什么时候会被取代</a>
-            
-        </h1>
-        <div class="content">
-            <p>Python经过了几十年的努力才得到了编程社区的赏识。自2010年以来，Python得到了蓬勃发展，并最终超越了C、C#、Java和JavaScript。</p>
-<p>但是，这种趋势将持续到什么时候？何时Python会被其他语言取代？被取代的原因又是什么呢？</p>
-<p>对于Python被淘汰出局的确切日期有很多猜测，它可能会像科幻小说一样成为过去。在本文中，我将讨论促成Python大面积普及的优势，以及将来导致它陨落的弱点。</p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL3N6X21tYml6X2pwZy9mODRrSkJYenJCVzQzNFhyMUNMWnpQcW9KMFFpY0pvaWJjVUtXTzNLdlN4cU91VDMwN25QQm5yc0JkWExOcWhDc2FTeDVtSFo4aGZVTHdON1RMcGEyaGFBLzY0MA?x-oss-process=image/format,png" alt="img"></p>
-<p><strong><em>\</em>促成Python流行的因素**</strong></p>
-<p>通过Stack Overflow发展趋势就可以洞悉Python的成功。考虑到StackOverflow的规模，我们可以认为这是衡量编程语言流行度的一个很好的指标。</p>
-<p>尽管在过去几年中，R语言的发展一直处于平稳状态，很多其他编程语言已开始稳步下降，但Python的增长似乎势不可挡。在所有StackOverflow的问题中，带有“python”标签的占到了14%，而且这种趋势还在上升。其中的原因有很多。</p>
-<p><strong><em>\</em>Python是一种古老的语言**</strong></p>
-<p>Python于90年代问世。这不仅意味着Python有足够的时间成长，而且还拥有了一个庞大的支持社区。</p>
-<p>因此，如果你在使用Python进行编程时遇到任何问题，只需上网搜索就可以得到答案。因为总是会有人在这之前就遇到了这个问题，并为此撰写了一些有用的资料。</p>
-<p><strong><em>\</em>对初学者很友好**</strong></p>
-<p>Python对初学者友好的原因不仅仅是因为它已经存在了数十年，予以程序员足够的时间编写出色的教程，而且还因为Python的语法非常易于理解。</p>
-<p>首先，无需指定数据类型。你只需声明一个变量即可，Python会根据上下文判断这个变量是整数、浮点数、布尔值还是其他类型。对于初学者来说，这是一个巨大的优势。如果你有过使用C++编程的经历，那么就会懂得只因为你错把浮点数定义成了整数，就导致程序无法通过编译有多么难受了。</p>
-<p>此外，比较Python和C++代码，不难发现Python有多么易于理解。尽管C++在设计时考虑到了英语，但与Python代码相比，阅读C++的代码还是相当坎坷。</p>
-<p><strong><em>\</em>用途广泛**</strong></p>
-<p>由于Python已经存在了很长时间，因此开发人员为之开发出了各色的软件包。如今，无论遇到什么问题，你都可以找到相关的软件包。</p>
-<ul>
-<li>想处理数字、向量和矩阵？那么就来试试 NumPy 吧。</li>
-<li>想进行技术和工程的计算？那么就来试试 SciPy 吧。</li>
-<li>想操作和分析大数据？那么就来试试 Pandas 吧。</li>
-<li>想学习人工智能？为什么不试试 Scikit-Learn 呢。</li>
-</ul>
-<p>无论你需要进行哪方面的计算任务，都可以找到相关的Python软件包。由于过去几年中机器学习的迅猛发展，Python已经站在了时代发展的最前沿。</p>
-<p><strong><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL3N6X21tYml6X2pwZy9mODRrSkJYenJCVzQzNFhyMUNMWnpQcW9KMFFpY0pvaWJjcmNVQ0FocExhbU5qbDlvM2ppYWlhNGxzanVIRndOaE1WU1g4Z1NrVFY3TUc1VzVMeWF6WVFzV1EvNjQw?x-oss-process=image/format,png" alt="img"></strong></p>
-<p><strong><em>\</em>Python的缺点，这些缺点是否致命？**</strong></p>
-<p>通过上述讨论，你可以想象在很长一段时间内Python的发展都势不可挡。然而，Python也逃不开一切技术的命运，它也有自己的弱点。接下来，我将逐个介绍Python的重大缺陷，并评估这些缺陷是否致命。</p>
-<p><strong><em>\</em>速度**</strong></p>
-<p>Python很慢，非常非常慢。平均而言，使用Python完成某个任务所需的时间是使用任何其他语言的2–10倍。</p>
-<p>其中的原因有很多。其中之一是因为Python是动态类型的，别忘了你不需要像其他语言一样指定数据类型。这意味着内存的耗费非常大，因为在任何情况下程序都需要为每个变量保留足够的空间。而巨大的内存使用量必然需要耗费大量的计算时间。</p>
-<p>另一个原因是Python一次只能执行一个任务。这是灵活的数据类型带来的结果，Python需要确保每个变量只有一个数据类型，而并行进程可能会在这一点上出问题。</p>
-<p>相比之下，普通的Web浏览器一次可以运行十几个不同的线程。当然其中还涉及别的因素。</p>
-<p>但最终所有的速度问题都不打紧。因为电脑和服务器的价格越来越低，我们谈论的也只不过是几分之一秒的问题。最终用户并不真正在乎他们的应用加载需要0.001还是0.01秒。</p>
-<p><strong><em>\</em>范围**</strong></p>
-<p>最初，Python是动态作用域。这基本上意味着，为了评估表达式，编译器首先需要搜索当前块，然后依次搜索所有调用函数。</p>
-<p>动态作用域的问题在于，每个表达式都需要在所有上下文中进行测试，这很繁琐。这就是为什么大多数现代编程语言都使用静态作用域。</p>
-<p>Python曾尝试过渡到静态作用域，但搞砸了。通常，内部作用域（例如函数中的函数）能够查看和更改外部作用域。在Python中，内部作用域只能看到外部作用域，但不能更改。因此引发了很多混乱。</p>
-<p><strong><em>\</em>Lambdas**</strong></p>
-<p>尽管Python非常灵活，但Lambdas的使用还是有一定的局限性。Lambda只能是Python中的表达式，而不能是语句。</p>
-<p>另一方面，变量声明和语句始终是语句，这意味着它们不能使用Lambda。</p>
-<p>在Python中，表达式和语句之间的区别相当随意，这是其他编程语言都没有的问题。</p>
-<p><strong><em>\</em>空白**</strong></p>
-<p>在Python中，你需要使用空白和缩进来表示不同级别的代码。这种格式具有视觉吸引力，而且易于理解。</p>
-<p>其他编程语言（例如C++）都需要依赖大括号和分号。尽管这可能在视觉上没有那么强的吸引力，而且对初学者不够友好，但可以提高代码的可维护性。在大型项目中，这种方式更为妥当。</p>
-<p>Haskell等新兴的编程语言解决了这个问题：它们依赖空白，但同时也为那些希望不用空白的人提供了另一种语法。</p>
-<p><strong><em>\</em>移动开发**</strong></p>
-<p>我们目睹了从台式机向智能手机的转变，很明显，我们需要强大的语言来构建移动软件。</p>
-<p>然而，使用Python开发的移动应用并不多。这并不意味着Python无法开发移动应用，你可以试试看一个名为 Kivy 的 Python 包。</p>
-<p>但是，Python的设计被没有考虑到移动设备。因此，即使Python可以应付基本的任务，但我们最好还是选择专门为移动应用程序开发而创建的语言。广泛用于移动编程的语言包括：React Native、Flutter、Iconic和Cordova。</p>
-<p>我们需要明确的是，笔记本电脑和台式计算机已经存在很多年了。然而，由于移动设备的使用已然超越了桌面设备，因此我们肯定地说，学习Python不足以成为经验丰富的全方面开发人员。</p>
-<p><strong><em>\</em>运行时错误**</strong></p>
-<p>Python不需要首先编译，然后再执行。相反，它会在每次执行时编译，因此所有编程上的错误都会在运行时显示出来。这会导致性能下降、浪费时间，而且还需要进行大量测试。</p>
-<p>对于初学者来说，这未必是坏事，因为测试可以教会他们很多知识。然而，对于经验丰富的开发人员而言，必须使用Python调试复杂的程序很令人头疼。性能欠缺是Python最大的问题。</p>
-<p><strong><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL3N6X21tYml6X2pwZy9mODRrSkJYenJCVzQzNFhyMUNMWnpQcW9KMFFpY0pvaWJjYWpzTlVvUngzTHVzcm5XVVVHb1Q0b3dtWldYZDBpYUlnRUxJOFplUjlPTmxDdWliU1VucTlreGcvNjQw?x-oss-process=image/format,png" alt="img"></strong></p>
-<p><strong><em>\</em>Python什么时候会被取代？**</strong></p>
-<p>如今，编程语言市场上涌现了新的竞争力量：</p>
-<ul>
-<li>Rust提供了与Python相同的安全性——不会意外覆盖任何变量。但是，它通过所有权和借用的概念解决了效率的问题。根据StackOverflow Insights，Rust是近几年最受欢迎的编程语言。</li>
-<li>Go 与 Python 一样非常适合初学者。语言本身非常简单，维护代码更加简单。此外，有趣的是，Go开发人员是市场上收入最高的程序员之一。</li>
-<li>Julia是一种非常新的语言，可与Python正面竞争。Julia填补了大规模技术计算的空白：以前，人们通常都需要使用Python或Matlab编写代码，然后再使用C++库修补整个程序，因为C++库是大规模必不可少的。如今，人们可以使用Julia，而不必在两种语言之间挣扎。</li>
-</ul>
-<p>尽管市场上还有其他语言，但Rust、Go和Julia 可以弥补Python的弱点。所有这些语言在即将到来的技术中都有出色的表现，最典型的就是人工智能。尽管它们的市场份额仍较小，但根据StackOverflow的数据显示，这些语言的发展呈现出明显的上升趋势。</p>
-<p>如今，Python无处不在，我们还需要五年甚至更长的时间，才有可能看到Python被新语言所替代。</p>
-<p>就目前而言，我们很难判断哪种语言有可能替代Python，是Rust、Go、Julia抑或是其他的新语言。但鉴于Python体系结构中最基本的性能问题，其终将难逃被人替代的命运。</p>
-<p>原文：</p>
-<p><a href="https://towardsdatascience.com/why-python-is-not-the-programming-language-of-the-future-30ddc5339b66">https://towardsdatascience.com/why-python-is-not-the-programming-language-of-the-future-30ddc5339b66</a></p>
-<p>本文为 CSDN 翻译，转载请注明来源出处</p>
 
         </div>
         
